@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.handler = async (event, context) => {
   try {
     const apiKey = process.env.API_KEY;
-    const apiBaseUrl = process.env.API_BASE_URL || "https://api.poiskkino.dev";
+    const apiBaseUrl = "https://api.poiskkino.dev";
 
     if (!apiKey) {
       console.error("Нет ключа API");
