@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { getMovieBySearch } from "./api/api";
 import type { AxiosResponse } from "axios";
 
+interface Movie {
+  name: string | undefined;
+}
+
 function App() {
   const [list, setList] = useState([]);
 
@@ -15,7 +19,7 @@ function App() {
   }, []);
   return (
     <>
-      {list.map((movie) => (
+      {list.map((movie: Movie) => (
         <div>{movie?.name}</div>
       ))}
     </>
